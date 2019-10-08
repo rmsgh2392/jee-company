@@ -1,0 +1,69 @@
+package com.company.web.daoimpls;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.company.web.daos.CompanyDao;
+import com.company.web.domains.EmployeeBean;
+import com.company.web.enums.Vendor;
+import com.company.web.factory.DatabaseFactory;
+
+public class CompanyDaoImpl implements CompanyDao{
+	private static CompanyDaoImpl instance = new CompanyDaoImpl();
+	
+	public static CompanyDaoImpl getInstance() {
+		return instance;
+	}
+	private CompanyDaoImpl() {}
+
+	@Override
+	public boolean insertEmployee(EmployeeBean param) {
+		boolean result = false;
+		String sql = "INSERT INTO EMP (EMPNO,ENAME,DEPTNO,MGR,HIREDATE,SAL,COMM,JOB) \n" + 
+				"VALUES(? ,? , ?,7566,SYSDATE,3000,NULL,'MANAGER')"; 
+		try {
+			PreparedStatement pstmt = DatabaseFactory.createDatabase(String.valueOf(Vendor.ORACLE)).getConnection().prepareStatement(sql);
+			pstmt.setString(1,param.getEmpNo());
+			pstmt.setString(2,param.getEname());
+			pstmt.setString(3,param.getDeptNo());
+			int rs = pstmt.executeUpdate();
+			result = (rs==1) ? true : false;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public EmployeeBean selectByEmpnoEname(EmployeeBean param) {
+		EmployeeBean emp = null;
+		String sql="SELECT *\n" + 
+				"FROM EMP\n" + 
+				"WHERE EMPNO LIKE ? \n" + 
+				"    AND ENAME LIKE ? \n" + 
+				"    AND DEPTNO LIKE ?";
+		try {
+			PreparedStatement pstmt = DatabaseFactory.createDatabase(String.valueOf(Vendor.ORACLE)).getConnection().prepareStatement(sql);
+			pstmt.setString(1,param.getEmpNo());
+			pstmt.setString(2,param.getEname());
+			pstmt.setString(3,param.getDeptNo());
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				emp = new EmployeeBean();
+				emp.setEmpNo(rs.getString("EMPNO"));
+				emp.setEname(rs.getString("ENAME"));
+				emp.setJob(rs.getString("JOB"));
+				emp.setMgr(rs.getString("MGR"));
+				emp.setHireDate(rs.getString("HIREDATE"));
+				emp.setSal(rs.getString("SAL"));
+				emp.setComm(rs.getString("COMM"));
+				emp.setDeptNo(rs.getString("DEPTNO"));
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return emp;
+	}
+
+}

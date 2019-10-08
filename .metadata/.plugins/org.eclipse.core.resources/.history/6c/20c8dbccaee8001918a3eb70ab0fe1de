@@ -1,0 +1,26 @@
+package com.company.web.daoimpls;
+
+import com.company.web.daos.CompanyDao;
+import com.company.web.domains.EmployeeBean;
+
+public class CompanyDaoImpl implements CompanyDao{
+	private static CompanyDaoImpl instance = new CompanyDaoImpl();
+	
+	public static CompanyDaoImpl getInstance() {
+		return instance;
+	}
+	private CompanyDaoImpl() {}
+
+	@Override
+	public boolean insertEmployee(EmployeeBean param) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public EmployeeBean selectByEmpnoEname(EmployeeBean param) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

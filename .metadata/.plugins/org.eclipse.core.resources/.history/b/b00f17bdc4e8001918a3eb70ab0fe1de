@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<div></div>
+<div><h1>회원가입</h1></div>
+<div></div>
+<div></div>
+<div>
+<form id="join_form">
+	<input id="join_deptNo" type="text" name="deptNo"/><br />
+	<input id="join_empNo" type="text" name="empNo"/><br />
+	<input id="join_ename" type="text" name="ename"/><br />
+	<input type="text"name="job" /><br />
+	<input type="text" name="mgr"/><br />
+	<input type="text" name="hireDate"/><br />
+	<input type="text" name="sal"/><br />
+	<input type="text" name="comm"/><br />
+	<input type="hidden" name="action" value="create"/>
+	<input type="hideen" name="page"value="main"/>
+	<input id="join_btn" type="button" value="가입하기" />
+</form>
+</div>
+<script>
+app.init('${ctx}');
+</script>

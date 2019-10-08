@@ -1,0 +1,5 @@
+package com.company.web.domains;
+
+public class DeptBean {
+
+}

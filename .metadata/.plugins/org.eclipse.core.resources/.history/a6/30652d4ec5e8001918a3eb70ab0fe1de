@@ -1,0 +1,36 @@
+package com.company.web.daoimpls;
+
+import java.sql.PreparedStatement;
+
+import com.company.web.daos.CompanyDao;
+import com.company.web.domains.EmployeeBean;
+import com.company.web.enums.Vendor;
+import com.company.web.factory.DatabaseFactory;
+
+public class CompanyDaoImpl implements CompanyDao{
+	private static CompanyDaoImpl instance = new CompanyDaoImpl();
+	
+	public static CompanyDaoImpl getInstance() {
+		return instance;
+	}
+	private CompanyDaoImpl() {}
+
+	@Override
+	public boolean insertEmployee(EmployeeBean param) {
+		boolean result = false;
+		try {
+			String sql = ""; 
+			PreparedStatement pstmt = DatabaseFactory.createDatabase(Vendor.valueOf(vendor))
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public EmployeeBean selectByEmpnoEname(EmployeeBean param) {
+		EmployeeBean emp = null;
+		return emp;
+	}
+
+}

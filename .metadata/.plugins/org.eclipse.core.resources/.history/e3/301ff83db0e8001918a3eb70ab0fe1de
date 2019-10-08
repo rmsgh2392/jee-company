@@ -1,0 +1,19 @@
+package com.company.web.command;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class Commander {
+	public static Command order(HttpServletRequest request) {
+		Command cmd = null;
+		switch () {
+		case value:
+			
+			break;
+
+		default:
+			break;
+		}
+		
+		return cmd;
+	}
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+html, body{
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
+.wrapper{
+	display : grid;
+	width: 100%;
+	height:100%;
+	grid-template-columns : 25% 50% 25%;
+	grid-template-rows : 10% 60% 30%
+}
+.login_tab{
+	display : grid;
+	width: 100%;
+	height:100%;
+	border : 1px solid black;
+	grid-template-columns : 40% 60%;
+	grid-template-rows : 7% 7% 7% 7%;
+	margin : 0 auto;
+}
+
+#main_text { width : 200px; margin : 0 auto;text-align:center;}
+#login_form{width:100%;height:100%}
+

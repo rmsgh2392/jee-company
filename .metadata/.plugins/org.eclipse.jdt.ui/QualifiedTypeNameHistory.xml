@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.company.web.controllers.FacadeController.Resources"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.company.web.enums.DBDriver"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="com.company.web.enums.DBUrl"/>
+<fullyQualifiedTypeName name="com.company.web.factory.Database"/>
+<fullyQualifiedTypeName name="com.company.web.factory.Oracle"/>
+<fullyQualifiedTypeName name="com.company.web.services.CompanyService"/>
+<fullyQualifiedTypeName name="com.company.web.daos.CompanyDao"/>
+<fullyQualifiedTypeName name="com.company.web.daoimpls.CompanyDaoImpl"/>
+<fullyQualifiedTypeName name="com.company.web.command.Order"/>
+<fullyQualifiedTypeName name="com.company.web.command.Commander"/>
+<fullyQualifiedTypeName name="com.company.web.command.CreateCommand"/>
+<fullyQualifiedTypeName name="com.company.web.command.LoginCommand"/>
+<fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="com.company.web.serviceimpls.CompanyServiceImpl"/>
+<fullyQualifiedTypeName name="com.company.web.command.Command"/>
+<fullyQualifiedTypeName name="com.company.web.command.Sender"/>
+<fullyQualifiedTypeName name="oracle.jdbc.proxy.annotation.Pre"/>
+<fullyQualifiedTypeName name="com.company.web.factory.DatabaseFactory"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.company.web.domains.EmployeeBean"/>
+<fullyQualifiedTypeName name="com.company.web.pool.Constants"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.regexp.internal.RE"/>
+<fullyQualifiedTypeName name="com.company.web.enums.Vendor"/>
+<fullyQualifiedTypeName name="com.company.web.enums.Actions"/>
+<fullyQualifiedTypeName name="com.company.web.command.Receiver"/>
+</qualifiedTypeNameHistroy>

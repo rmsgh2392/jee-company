@@ -1,0 +1,5 @@
+package com.company.web.factory;
+
+public class Oracle implements Database{
+
+}

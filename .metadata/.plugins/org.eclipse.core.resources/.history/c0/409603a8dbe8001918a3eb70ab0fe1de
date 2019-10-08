@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<jsp:include page="../common/head.jsp"/>
+입력하신 ID ${employee.empNo}
+입력하신 PW ${employee.ename}
+입력하신 부서번호 ${employee.deptNo}
+부서명 ${employee.dname}
+<jsp:include page="../common/foot.jsp"/>
+<script>
+app.init('${ctx}');
+</script>

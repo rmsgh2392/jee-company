@@ -1,0 +1,32 @@
+package com.company.web.command;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.company.web.domains.EmployeeBean;
+import com.company.web.serviceimpls.CompanyServiceImpl;
+
+public class CreateCommand extends Command{
+	public CreateCommand(HttpServletRequest request) {
+		super.setRequest(request);
+		setDomain(request.getServletPath().substring(1,request.getServletPath().indexOf(".")));
+		setAction(request.getParameter("action"));
+		setPage(request.getParameter("page"));
+	}
+	@Override
+	public void execute() {
+		EmployeeBean emp = new EmployeeBean();
+		emp.setEmpNo(request.getParameter("empNo"));
+		emp.setEname(request.getParameter("ename"));
+		emp.setDeptNo(request.getParameter("deptNo"));
+		emp.setComm(request.getParameter("comm"));
+		emp.setHireDate(request.getParameter("hireDate"));
+		emp.setJob(request.getParameter("job"));
+		emp.setMgr(request.getParameter("mgr"));
+		emp.setSal(request.getParameter("sal"));
+		
+		if(CompanyServiceImpl.getInstance().join(emp)) {
+			
+		}
+		super.execute();
+	}
+}

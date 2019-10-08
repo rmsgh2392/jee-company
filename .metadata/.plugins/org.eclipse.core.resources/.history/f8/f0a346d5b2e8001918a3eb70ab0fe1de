@@ -1,0 +1,17 @@
+package com.company.web.command;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class LoginCommand extends Command{
+	public LoginCommand(HttpServletRequest request) {
+		super.setRequest(request);
+		setDomain(request.getServletPath().substring(1,request.getServletPath().indexOf(".")));
+		setAction(request.getParameter("action"));
+		setPage(request.getParameter("page"));
+	}
+	@Override
+	public void execute() {
+		
+		super.execute();
+	}
+}

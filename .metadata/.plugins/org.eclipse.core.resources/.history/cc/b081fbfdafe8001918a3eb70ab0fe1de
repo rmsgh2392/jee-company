@@ -1,0 +1,17 @@
+package com.company.web.command;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class Command implements Order{
+	protected HttpServletRequest request;
+	protected String action,domain,page,view;
+	
+	
+	
+	@Override
+	public void execute() {
+		
+		
+	}
+
+}

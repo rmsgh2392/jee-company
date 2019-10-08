@@ -1,0 +1,23 @@
+package com.company.web.command;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.company.web.domains.EmployeeBean;
+
+public class LoginCommand extends Command{
+	public LoginCommand(HttpServletRequest request) {
+		super.setRequest(request);
+		setDomain(request.getServletPath().substring(1,request.getServletPath().indexOf(".")));
+		setAction(request.getParameter("action"));
+		setPage(request.getParameter("page"));
+	}
+	@Override
+	public void execute() {
+		EmployeeBean emp = new EmployeeBean();
+		emp.setDeptNo(request.getParameter("depNo"));
+		emp.setEmpNo(request.getParameter("empNo"));
+		emp.setEname(request.getParameter("ename"));
+		
+		super.execute();
+	}
+}
